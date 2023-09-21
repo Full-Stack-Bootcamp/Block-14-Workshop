@@ -1,3 +1,4 @@
+//
 // ONLY ODDS
 
 // Create a for loop to go through length of input array
@@ -15,7 +16,7 @@ function onlyOdds(numArr) {
   return oddArray;
 }
 
-// onlyOdds(input);
+onlyOdds(input);
 
 //
 // VOWEL VERSUS CONSONANT
@@ -35,13 +36,17 @@ function vowVerCons(word) {
   let vowelCount = 0;
   let consCount = 0;
   for (i = 0; i < word.length; i++) {
-    vowels.includes(word[i].toLowerCase()) ? vowelCount++ : consCount++;
+    vowels.includes(word[i].toLowerCase())
+      ? vowelCount++
+      : word[i] !== " "
+      ? consCount++
+      : consCount;
   }
   console.log(`${word} has ${consCount} consonants and ${vowelCount} vowels`);
   return `${word} has ${consCount} consonants and ${vowelCount} vowels`;
 }
 
-// vowVerCons(word);
+vowVerCons(word);
 
 //
 // REVERSE ARRAY
@@ -62,7 +67,7 @@ function revArr(array) {
   console.log(reverseArrary);
 }
 
-// revArr(testArray);
+revArr(testArray);
 
 //
 // FIZZBUZZ
@@ -84,4 +89,4 @@ function fizzBuzz() {
       : console.log(i);
 }
 
-// fizzBuzz();
+fizzBuzz();
